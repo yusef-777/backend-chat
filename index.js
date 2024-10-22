@@ -10,7 +10,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: 'http://localhost:3000',
+    origin: 'https://celebrated-faloodeh-3712a9.netlify.app/',
     methods: ['GET', 'POST'],
     credentials: true
   }
