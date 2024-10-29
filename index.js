@@ -5,12 +5,13 @@ const cors = require('cors');
 const { handleUserConnection, handleUserDisconnection } = require('./controllers/mainController');
 const app = express();
 const server = http.createServer(app);
+const allowedOrigin = 'https://celebrated-faloodeh-3712a9.netlify.app';
 const io = socketIo(server, {
   cors: {
-    origin: 'http://localhost:3000',
+    origin: allowedOrigin,
     methods: ['GET', 'POST'],
-    credentials: true,
-  },
+    credentials: true
+  }
 });
 
 app.use(cors());
